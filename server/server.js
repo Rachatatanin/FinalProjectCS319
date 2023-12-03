@@ -12,4 +12,4 @@ mongoose.connect('mongodb+srv://rachatatani:SMfrdecbooHrcmfq@cluster0.46insu0.mo
     .then(() => console.log('connection successfully'))
     .catch(err => console.log(err));
 
-app.listen(5000, () => {console.log('Server running on port 5000')});
+app.listen(8080, () => {console.log('Server running on port 8080')});
