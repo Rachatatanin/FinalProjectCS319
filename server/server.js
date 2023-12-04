@@ -1,15 +1,24 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const informationRouter = require('./routes/informationRouter');
+const indexRouter = require('./routes/index');
+
 const app = express();
+const PORT = 8080;
 
 mongoose.Promise = global.Promise;
 
-app.get('/api', (req, res) => {
-    res.json({"users": ["userOne", "userTwo", "userThree"]});
-})
+app.use(express.json()); // Parse JSON request bodies
 
-mongoose.connect('mongodb+srv://rachatatani:SMfrdecbooHrcmfq@cluster0.46insu0.mongodb.net/?retryWrites=true&w=majority', )
-    .then(() => console.log('connection successfully'))
-    .catch(err => console.log(err));
+app.use('/', indexRouter);
+app.use('/informations', informationRouter);
 
-app.listen(8080, () => {console.log('Server running on port 8080')});
+mongoose
+  .connect('mongodb+srv://rachatatani:SMfrdecbooHrcmfq@cluster0.46insu0.mongodb.net/information?retryWrites=true&w=majority')
+  .then(() => {
+    console.log('Connected to MongoDB');
+    app.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`);
+    });
+  })
+  .catch((err) => console.error(err));
