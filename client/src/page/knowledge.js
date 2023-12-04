@@ -1,7 +1,25 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+
 function Knowledge() {
+  const [informations, setInformations] = useState([]);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch('http://localhost:8080/informations');
+      const data = await response.json();
+      setInformations(data.information); // แนะนำให้ตรวจสอบตัวแปรที่เก็บข้อมูลใน API ว่าอยู่ที่ data.information หรือไม่
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+  console.log(informations);
+  
     
 
 
