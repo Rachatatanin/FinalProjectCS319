@@ -1,26 +1,27 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 function Knowledge() {
   const [informations, setInformations] = useState([]);
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+
 
   const fetchData = async () => {
     try {
-      const response = await fetch('http://localhost:8080/informations');
-      const data = await response.json();
-      setInformations(data.information); // แนะนำให้ตรวจสอบตัวแปรที่เก็บข้อมูลใน API ว่าอยู่ที่ data.information หรือไม่
+      const response = await axios.get('http://localhost:8080/informations');
+      console.log(response.data); // ตรวจสอบข้อมูลที่ได้จาก API
+      setInformations(response.data.information); // ใช้ response.data.information แทน response.data
     } catch (error) {
       console.error('Error fetching data:', error);
     }
   };
-  console.log(informations);
   
-    
+  useEffect(() => {
+    fetchData();
+  }, []);
+
 
 
   return (
@@ -61,16 +62,19 @@ function Knowledge() {
         <p className="ml-16 text-4xl mt-5">Knowledge</p>
       </div>
 
-      <div className="grid grid-cols-3 mt-5">
-        <div className="card w-96 bg-base-100 shadow-xl m-auto">
-          <div className="card-body">
-            <h2 className="card-title">Card title!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div className="card-actions justify-end">
-              <button className="btn btn-primary">Go</button>
+      <div className="grid grid-cols-3 mt-5 gap-4">
+        {/* บรรทัดด้านล่างไว้แก้ Fillter */}
+        {informations.filter(information => information.info_category_id === 1).map((information) => (
+          <div className="card w-96 bg-base-100 shadow-xl m-auto m-4" key={information._id}>
+            <div className="card-body">
+              <h2 className="card-title">{information.info_title}</h2>
+              <p>{information.info_desc}</p>
+              <div className="card-actions justify-end">
+                <a href={information.info_link} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Go</a>
+              </div>
             </div>
           </div>
-        </div>
+        ))}
       </div>
 
       <footer className="footer footer-center p-10">
