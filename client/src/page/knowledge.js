@@ -63,7 +63,8 @@ function Knowledge() {
       </div>
 
       <div className="grid grid-cols-3 mt-5 gap-4">
-        {informations.map((information) => (
+        {/* บรรทัดด้านล่างไว้แก้ Fillter */}
+        {informations.filter(information => information.info_category_id === 1).map((information) => (
           <div className="card w-96 bg-base-100 shadow-xl m-auto m-4" key={information._id}>
             <div className="card-body">
               <h2 className="card-title">{information.info_title}</h2>
