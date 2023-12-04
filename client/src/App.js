@@ -11,6 +11,7 @@ const App = () => {
         <KnowledgeComponent />
         <Cafe />
         <Adopt />
+        <h1>  hello</h1>
       </div>
     </AppContextProvider>
   );
