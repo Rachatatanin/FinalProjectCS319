@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@500&family=Raleway:wght@300&display=swap');
+
+
+.knowledge{
+  background-color: bisque;
+  font-family: 'Goldman', cursive;
+  height: 100%;
+  width: 100%;
+}
+
+.knowledge_navbar {
+  background-color: bisque;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+  font-family: 'Goldman', cursive;
+  display: flex; 
+  align-items: center; 
+  height: 80px;
+}
+
+.butt button{
+  font-family: 'Goldman', cursive;
+}
+
+.banner {
+  background-image: url("https://cdn.discordapp.com/attachments/742591897465520168/1181236861713256558/bannerimg.jpg?ex=6580538e&is=656dde8e&hm=515ed7131fc33405bf87db2cecad0dd160673acfba0295bff38cf0f99a588b3c&"); 
+  background-size: 100% 100%; 
+  background-repeat: no-repeat; 
+  margin-top: 3% ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; 
+  padding: 20px;
+  height: 400px;
+}
+
+.banner-text {
+  text-align: left; 
+  font-family: 'Goldman', cursive;
+  
+}
+
+.card-body{
+  font-family: 'Goldman', cursive;
+}

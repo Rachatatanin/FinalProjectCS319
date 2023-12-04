@@ -3,9 +3,8 @@ import ReactDOM from "react-dom/client";
 import React, { useContext } from "react";
 import { AppContext } from "./AppContext";
 
-const KnowledgeComponent = () => {
-  const { currentComponent, handleComponentChange } = useContext(AppContext);
-
+const Adopt = () => {
+    const { currentComponent, handleComponentChange } = useContext(AppContext);
   return (
     <div className="knowledge">
       <div className="knowledge_navbar grid grid-rows-1 grid-cols-3 flex justify-center">
@@ -20,19 +19,19 @@ const KnowledgeComponent = () => {
         <div className="butt col-start-3 w-50%">
         <button
           className="btn btn-ghost text-2xl"
-          onClick={() => handleComponentChange("knowledge")}
+          onClick={() => handleComponentChange("KnowledgeComponent")}
         >
           <p>Knowledge</p>
         </button>
         <button
           className="btn btn-ghost text-2xl ml-5"
-          onClick={() => handleComponentChange("cafe")}
+          onClick={() => handleComponentChange("Cafe")}
         >
           Cafe
         </button>
         <button
           className="btn btn-ghost text-2xl ml-5"
-          onClick={() => handleComponentChange("adopt")}
+          onClick={() => handleComponentChange("Adopt")}
         >
           Adopt
         </button>
@@ -48,7 +47,7 @@ const KnowledgeComponent = () => {
       </div>
       
       <div>
-        <p className="ml-16 text-4xl mt-5">Knowledge</p>
+        <p className="ml-16 text-4xl mt-5">Adopt</p>
       </div>
 
       <div className="grid grid-cols-3 mt-5">
@@ -72,9 +71,7 @@ const KnowledgeComponent = () => {
         </aside>
       </footer>
     </div>
-    );
+  );
 };
 
-const container = document.getElementById('root');
-const root = ReactDOM.createRoot(container);
-root.render(<KnowledgeComponent />);
+
