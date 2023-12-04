@@ -1,10 +1,9 @@
-import "./globals.css";
-import ReactDOM from "react-dom/client";
-import React, { useContext } from "react";
-import { AppContext } from "./AppContext";
 
-const Cafe = () => {
-  const { currentComponent, handleComponentChange } = useContext(AppContext);
+import React from 'react';
+import { Link } from 'react-router-dom';
+function Knowledge() {
+    
+
 
   return (
     <div className="knowledge">
@@ -18,24 +17,17 @@ const Cafe = () => {
         <p className="ml-16 text-2xl fixed left-0">Happy Cat & Dog</p>
 
         <div className="butt col-start-3 w-50%">
-        <button
-          className="btn btn-ghost text-2xl"
-          onClick={() => handleComponentChange("knowledge")}
-        >
-          <p>Knowledge</p>
-        </button>
-        <button
-          className="btn btn-ghost text-2xl ml-5"
-          onClick={() => handleComponentChange("cafe")}
-        >
-          Cafe
-        </button>
-        <button
-          className="btn btn-ghost text-2xl ml-5"
-          onClick={() => handleComponentChange("adopt")}
-        >
-          Adopt
-        </button>
+        <Link to="/">
+          <button className="btn btn-ghost text-2xl">
+            <p>Knowledge</p>
+          </button>
+        </Link>
+        <Link to="/cafe">
+          <button className="btn btn-ghost text-2xl ml-5">Cafe</button>
+        </Link>
+        <Link to="/adopt">
+          <button className="btn btn-ghost text-2xl ml-5">Adopt</button>
+        </Link>
       </div>
     </div>
 
@@ -48,7 +40,7 @@ const Cafe = () => {
       </div>
       
       <div>
-        <p className="ml-16 text-4xl mt-5">Cafe</p>
+        <p className="ml-16 text-4xl mt-5">Knowledge</p>
       </div>
 
       <div className="grid grid-cols-3 mt-5">
@@ -72,7 +64,7 @@ const Cafe = () => {
         </aside>
       </footer>
     </div>
-  );
+    );
 };
 
-
+export default Knowledge;

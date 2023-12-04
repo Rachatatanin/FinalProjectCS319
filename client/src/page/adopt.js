@@ -1,10 +1,9 @@
-import "./globals.css";
-import ReactDOM from "react-dom/client";
-import React, { useContext } from "react";
-import { AppContext } from "./AppContext";
 
-const Adopt = () => {
-    const { currentComponent, handleComponentChange } = useContext(AppContext);
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+function Adopt() {
+    
   return (
     <div className="knowledge">
       <div className="knowledge_navbar grid grid-rows-1 grid-cols-3 flex justify-center">
@@ -17,24 +16,17 @@ const Adopt = () => {
         <p className="ml-16 text-2xl fixed left-0">Happy Cat & Dog</p>
 
         <div className="butt col-start-3 w-50%">
-        <button
-          className="btn btn-ghost text-2xl"
-          onClick={() => handleComponentChange("KnowledgeComponent")}
-        >
-          <p>Knowledge</p>
-        </button>
-        <button
-          className="btn btn-ghost text-2xl ml-5"
-          onClick={() => handleComponentChange("Cafe")}
-        >
-          Cafe
-        </button>
-        <button
-          className="btn btn-ghost text-2xl ml-5"
-          onClick={() => handleComponentChange("Adopt")}
-        >
-          Adopt
-        </button>
+        <Link to="/">
+          <button className="btn btn-ghost text-2xl">
+            <p>Knowledge</p>
+          </button>
+        </Link>
+        <Link to="/cafe">
+          <button className="btn btn-ghost text-2xl ml-5">Cafe</button>
+        </Link>
+        <Link to="/adopt">
+          <button className="btn btn-ghost text-2xl ml-5">Adopt</button>
+        </Link>
       </div>
     </div>
 
@@ -75,3 +67,4 @@ const Adopt = () => {
 };
 
 
+export default  Adopt;
