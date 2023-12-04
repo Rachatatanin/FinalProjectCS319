@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import React, { useContext } from "react";
 import { AppContext } from "./AppContext";
 
-const KnowledgeComponent = () => {
+const Cafe = () => {
   const { currentComponent, handleComponentChange } = useContext(AppContext);
 
   return (
@@ -48,7 +48,7 @@ const KnowledgeComponent = () => {
       </div>
       
       <div>
-        <p className="ml-16 text-4xl mt-5">Knowledge</p>
+        <p className="ml-16 text-4xl mt-5">Cafe</p>
       </div>
 
       <div className="grid grid-cols-3 mt-5">
@@ -72,9 +72,7 @@ const KnowledgeComponent = () => {
         </aside>
       </footer>
     </div>
-    );
+  );
 };
 
-const container = document.getElementById('root');
-const root = ReactDOM.createRoot(container);
-root.render(<KnowledgeComponent />);
+
