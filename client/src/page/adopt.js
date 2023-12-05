@@ -54,6 +54,7 @@ function Adopt() {
       <div className="banner-adopt">
         <div className="card glass shadow-xl">
           <div className="card-body">
+            <h2 className="card-title text-5xl place-self-center	">Adopt</h2>
             <h2 className="card-title text-2xl">การรับเลี้ยงหมาแมว ไม่เพียงแค่เป็นการให้รักและบ้าน <br/>แต่เป็นการเปลี่ยนชีวิตของทั้งคุณและพวกเขาในทางที่ไม่เคยคาดคิด</h2>
           </div>
         </div>
