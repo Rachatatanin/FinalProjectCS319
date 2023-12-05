@@ -49,10 +49,11 @@ function Cafe() {
       </div>
     </div>
 
-      <div className="banner">
+      <div className="banner-cafe">
         <div className="card glass shadow-xl">
           <div className="card-body">
-            <h2 className="card-title text-2xl">KEY</h2>
+            <h2 className="card-title text-5xl place-self-center	">Café</h2>
+            <h2 className="card-title text-2xl">คาเฟ่หมาแมว ไม่เพียงเป็นสถานที่ที่มีกาแฟอร่อย <br/>แต่เป็นสวรรค์ที่มีน้องแมวและหมาเป็นเพื่อนร่วมชิมความสุขของชีวิต</h2>
           </div>
         </div>
       </div>

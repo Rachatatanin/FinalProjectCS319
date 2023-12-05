@@ -53,7 +53,8 @@ function Knowledge() {
       <div className="banner">
         <div className="card glass shadow-xl">
           <div className="card-body">
-            <h2 className="card-title text-2xl">Knowlesrthwrtgnsrtnwsrtnsrtnwrtndge</h2>
+            <h2 className="card-title text-5xl place-self-center	">Knowledge</h2>
+            <h2 className="card-title  text-2xl">เพราะการเลี้ยงหมาและแมว <br/>คือการเรียนรู้ความรักและความเข้าใจที่ไม่มีที่สิ้นสุด</h2>
           </div>
         </div>
       </div>
