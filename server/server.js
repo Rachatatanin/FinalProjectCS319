@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const informationRouter = require('./routes/informationRouter');
+const informationCategoryRouter = require('./routes/informationCategoryRouter');
 const indexRouter = require('./routes/index');
 const cors = require('cors'); // นำเข้า cors
 
@@ -17,6 +18,7 @@ app.use(express.json()); // Parse JSON request bodies
 
 app.use('/', indexRouter);
 app.use('/informations', informationRouter);
+app.use('/information_category', informationCategoryRouter);
 
 
 mongoose
