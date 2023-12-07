@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@500&family=Raleway:wght@300&display=swap');
+
+
+.knowledge{
+  background-color: bisque;
+  font-family: 'Goldman', cursive;
+  height: 100%;
+  width: 100%;
+}
+
+
+
+.knowledge_navbar {
+  background-color: bisque;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+  font-family: 'Goldman', cursive;
+  display: flex; 
+  align-items: center; 
+  height: 80px;
+}
+
+.butt button{
+  font-family: 'Goldman', cursive;
+}
+
+.banner {
+  background-image: url("https://cdn.discordapp.com/attachments/742591897465520168/1181236861713256558/bannerimg.jpg?ex=6580538e&is=656dde8e&hm=515ed7131fc33405bf87db2cecad0dd160673acfba0295bff38cf0f99a588b3c&"); 
+  background-size: 100% 100%; 
+  background-repeat: no-repeat; 
+  margin-top: 3% ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; 
+  padding: 20px;
+  height: 400px;
+}
+
+.banner-cafe {
+  background-image: url("https://cdn.discordapp.com/attachments/742591897465520168/1181612721708466186/111897_f7e73333d3944cf688c036e5ff9e3ca2mv2.webp?ex=6581b19a&is=656f3c9a&hm=6586ecb0d3259de19ab11f430b658f6d79fd71e6777a2f62df54983743135581&"); 
+  background-size: 100% 100%; 
+  background-repeat: no-repeat; 
+  margin-top: 3% ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; 
+  padding: 20px;
+  height: 400px;
+}
+
+.banner-adopt {
+  background-image: url("https://cdn.discordapp.com/attachments/742591897465520168/1181606369921609819/VIER_PFOTEN_2016-09-18_081-2000x666-1920x639.jpg?ex=6581abaf&is=656f36af&hm=fe96960f2ed95b81c77f6e93245c662b6e44f46cc1b4ba6b05b2b6e58d5c9876&"); 
+  background-size: 100% 100%; 
+  background-repeat: no-repeat; 
+  margin-top: 3% ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; 
+  padding: 20px;
+  height: 400px;
+}
+
+.banner-text {
+  text-align: left; 
+  font-family: 'Goldman', cursive;
+  
+}
+
+.card-body{
+  font-family: 'Goldman', cursive;
+}
+
+.card-body h2{
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font: bisque;
+}

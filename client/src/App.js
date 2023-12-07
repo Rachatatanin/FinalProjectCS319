@@ -1,31 +1,20 @@
-import React, { useEffect,useState  } from 'react'
+import React from "react";
+import { AppContextProvider } from "./AppContext";
+import KnowledgeComponent from "./KnowledgeComponent";
+import Cafe from "./cafe";
+import Adopt from "./adopt";
 
-function App() {
-
-  const [backendData, setBackendData] = useState([]);
-
-useEffect(() => {
-  fetch('/api').then(
-    response => response.json()
-  ).then(
-    data => {
-      setBackendData(data)
-    }
-  )
-    
-}, [])
-
+const App = () => {
   return (
-    <div>
-      {(typeof backendData.users === 'undefined') ?(
-        <p>Loading...</p>
-      ):(
-        backendData.users.map((user, i) => (
-          <p key={i}>{user}</p>
-          ))
-        )}
-    </div>
-  )
-}
+    <AppContextProvider>
+      <div className="App">
+        <KnowledgeComponent />
+        <Cafe />
+        <Adopt />
+        <h1>  hello</h1>
+      </div>
+    </AppContextProvider>
+  );
+};
 
-export default App
+export default App;
