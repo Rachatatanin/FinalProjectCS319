@@ -1,3 +1,10 @@
+1.ติดตั้ง visual studio
+2.ติดตั้ง Node.js
+3.ทำการนำไฟล์ zip ตัวโปรเจคเข้าไปใน visual studio
+4. เปิด terminal และทำการ npm i เพื่อติดตั้ง node modules
+5.ทำการเปิด server ด้วยการพิมพ์ที่ terminal ว่า cd server และทำการ npm run dev
+6.ทำการเปิด client ด้วยการพิมพ์ที่ terminal ว่า cd client และทำการ npm start
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +75,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
